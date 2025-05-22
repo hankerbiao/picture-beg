@@ -39,7 +39,7 @@ A simple and easy-to-use image upload and management service for NC Testing Cent
 
 1. 克隆代码库 | Clone the repository
    ```bash
-   git clone https://github.com/your-username/image-hosting-service.git
+   git clone https://github.com/hankerbiao/picture-beg.git
    cd image-hosting-service/frontend
    ```
 

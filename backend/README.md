@@ -28,7 +28,7 @@
 
 1. 克隆仓库
    ```bash
-   git clone <仓库地址>
+   git clone https://github.com/hankerbiao/picture-beg.git
    cd image-hosting-service/backend
    ```
 
