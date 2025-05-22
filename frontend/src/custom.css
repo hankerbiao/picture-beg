@@ -1,0 +1,85 @@
+/* 页面容器 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  min-height: calc(100vh - 120px);
+}
+
+/* 页面标题 */
+.page-title {
+  position: relative;
+  margin-bottom: 36px !important;
+  text-align: center;
+  color: #262626;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1890ff, #40a9ff);
+  border-radius: 2px;
+}
+
+/* 上传区域样式增强 */
+.upload-container {
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片列表区域 */
+.images-container {
+  margin-top: 32px;
+}
+
+/* 页脚样式 */
+.app-footer {
+  text-align: center;
+  padding: 16px 0;
+  color: #8c8c8c;
+  font-size: 14px;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 48px;
+}
+
+/* 上传区域美化 */
+.ant-upload-drag {
+  border-radius: 12px !important;
+  border: 2px dashed #d9d9d9 !important;
+  background: linear-gradient(145deg, #f8fafc, #f1f5f9) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-upload-drag:hover {
+  border-color: #1890ff !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f7f9fc !important;
+  font-weight: 600 !important;
+}
+
+.ant-btn-primary {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-card-head {
+  border-bottom: 2px solid #f0f0f0 !important;
+}
+
+.ant-card {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}

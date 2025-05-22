@@ -1,0 +1,123 @@
+/* 自定义全局样式 */
+:root {
+  --primary-color: #1890ff;
+  --primary-hover: #40a9ff;
+  --primary-light: #e6f7ff;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --heading-color: #262626;
+  --text-color: #595959;
+  --text-color-secondary: #8c8c8c;
+  --disabled-color: rgba(0, 0, 0, 0.25);
+  --border-radius-base: 8px;
+  --border-color-base: #d9d9d9;
+  --box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: #f5f7fa;
+}
+
+/* 页面容器 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  min-height: calc(100vh - 120px);
+}
+
+/* 页面标题 */
+.page-title {
+  position: relative;
+  margin-bottom: 36px !important;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+  border-radius: 2px;
+}
+
+/* 上传区域样式增强 */
+.upload-container {
+  background-color: #fff;
+  border-radius: var(--border-radius-base);
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color-base);
+}
+
+.upload-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片列表区域 */
+.images-container {
+  background-color: #fff;
+  border-radius: var(--border-radius-base);
+  margin-top: 32px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 16px !important;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: var(--primary-color);
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+/* 按钮样式增强 */
+.ant-btn-primary {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-hover)) !important;
+  border: none !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ant-btn {
+  border-radius: 6px !important;
+}
+
+/* 分割线样式 */
+.ant-divider {
+  margin: 24px 0 !important;
+}
+
+/* 页脚样式 */
+.app-footer {
+  text-align: center;
+  padding: 16px 0;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 48px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 16px;
+    border-radius: 0;
+  }
+} 

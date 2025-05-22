@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义全局样式 */
+:root {
+  --primary-color: #1890ff;
+  --primary-hover: #40a9ff;
+  --primary-light: #e6f7ff;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --heading-color: #262626;
+  --text-color: #595959;
+  --text-color-secondary: #8c8c8c;
+  --disabled-color: rgba(0, 0, 0, 0.25);
+  --border-radius-base: 8px;
+  --border-color-base: #d9d9d9;
+  --box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+/* 解决Tailwind CSS与Ant Design的冲突 */
+html {
+  --antd-wave-shadow-color: #1890ff;
+}
+
+/* 覆盖滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 页面容器 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  min-height: calc(100vh - 120px);
+}
+
+/* 页面标题 */
+.page-title {
+  position: relative;
+  margin-bottom: 36px !important;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+  border-radius: 2px;
+}
+
+/* 上传区域样式增强 */
+.upload-container {
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片列表区域 */
+.images-container {
+  margin-top: 32px;
+}
+
+/* 按钮样式增强 */
+.ant-btn-primary {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 页脚样式 */
+.app-footer {
+  text-align: center;
+  padding: 16px 0;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 48px;
+} 
