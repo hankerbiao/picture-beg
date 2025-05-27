@@ -66,6 +66,11 @@ const ImageList: React.FC<ImageListProps> = ({ images, loading, onDelete }) => {
     });
   };
 
+  // 获取文件信息文本
+  const getFileInfoText = (record: ImageType): string => {
+    return record.original_filename;
+  };
+
   const columns = [
     {
       title: '缩略图',
@@ -135,8 +140,11 @@ const ImageList: React.FC<ImageListProps> = ({ images, loading, onDelete }) => {
           <Tooltip title="预览图片">
 
           </Tooltip>
-          <CopyToClipboard text={record.url} onCopy={() => message.success('链接已复制到剪贴板')}>
-            <Tooltip title="复制链接">
+          <CopyToClipboard 
+            text={`${getFileInfoText(record)}:${record.url}`} 
+            onCopy={() => message.success('文件信息和链接已复制到剪贴板')}
+          >
+            <Tooltip title="复制文件信息和链接">
               <Button 
                 shape="circle" 
                 icon={<CopyOutlined />}
@@ -145,11 +153,11 @@ const ImageList: React.FC<ImageListProps> = ({ images, loading, onDelete }) => {
             </Tooltip>
           </CopyToClipboard>
           <Tooltip title="删除图片">
-            <Button 
-              type="primary" 
-              danger 
-              shape="circle" 
-              icon={<DeleteOutlined />} 
+            <Button
+              type="primary"
+              danger
+              shape="circle"
+              icon={<DeleteOutlined />}
               onClick={() => handleDelete(record.id)}
               size="middle"
             />
